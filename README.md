@@ -11,10 +11,10 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 
 Also, make sure you have pre-installed packages and libraries as listed below.
-  # install.packages("dplyr")
-  # library(dplyr)
-  # install.packages("reshape")
-  # library(reshape)
+  1. install.packages("dplyr")
+  2. library(dplyr)
+  3. install.packages("reshape")
+  4. library(reshape)
   
 Otherwise, comment the first few line od the code (for installation) to install the 
 needed packages and libraries.
