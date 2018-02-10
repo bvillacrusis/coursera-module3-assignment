@@ -1,0 +1,39 @@
+The script is used to clean a data set collected from smartphones.
+
+Data set can be downloaded in the following URL:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Complete description of the data set are included in the zipped files.
+
+The general flow of the code is described below:
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Labels the data set with descriptive variable names.
+5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+In 3, I removed unnecessar characters in the column labels (e.g. dot).
+I also replaced some of the characters in teh label to make it more descriptive as listed below:
+      "tBody" was replaced by "3D Signal Body"
+      "tGravity" was replaced by "3D Signal Gravity"
+      "fbodybody" was replaced by "FD Signal Body"
+      fBody" was replaced by "FD Signal Body"
+      "Acc" was replaced by " Accelerator "
+      "Mag" was replaced by " Magnitude "
+      "Jerk" was replaced by " Jerk "
+      "Gyro" was replaced by " Gyro "
+      "std" was replaced by "StandardDev"
+      "mean" was replaced by "Mean"
+      
+      
+  In 5, I melt the original data set to easily compute the mean for each variable, for each user and activity
+  using cast function.
+  
+  I iterate in the resulting 3-dimensional matrix, to write them in a csv file with a readable
+  formatting or display.
+  
+  Note: To make the content of the output file more readable, I used row.names=TRUE inside write.table()
+  function. You may set it to FALSE if you don't want to display row labels. 
+  
+  The content of the file shows the mean of each variable per user and per activity.
+  The tables are per USER. Then for each table, the row is the activity and the column is the computed mean of the variable.
