@@ -16,11 +16,11 @@ Also, make sure you have pre-installed packages and libraries as listed below.
   3. install.packages("reshape")
   4. library(reshape)
   
-Otherwise, comment the first few line od the code (for installation) to install the 
+Otherwise, comment the first few line of the code (for installation) to install the 
 needed packages and libraries.
 
 The ouput of the program will be located in your working directory with a file name
-tidy_data_set.csv.
+tidy_data_set.txt.
 
 Below is the main flow of the program:
 
