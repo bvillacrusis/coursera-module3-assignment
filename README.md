@@ -37,8 +37,8 @@ Step 2. Uses descriptive activity names to name the activities in the data set
   
 Step 3. Labels the data set with descriptive variable names.
   * I edit the variable names using sub function
-  * the code did the following changes: 
-    *"tBody" was replaced by "3D Signal Body"
+  * the code did the following changes:
+   *"tBody" was replaced by "3D Signal Body"
     *"tGravity" was replaced by "3D Signal Gravity"
     *"fbodybody" was replaced by "FD Signal Body"
     *"fBody" was replaced by "FD Signal Body"
