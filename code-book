@@ -1,39 +1,33 @@
-The script is used to clean a data set collected from smartphones.
+This tidy data set (tidy_data_set) is a cleaned version of the data collected 
+from the accelerometers from the Samsung Galaxy S smartphone. It shows the
+means of each variable for each activity for each user. Teh means are computed ONLY
+for variables associated to MEAN and STANDARD DEVIATION values.
 
-Data set can be downloaded in the following URL:
+The general purpose of the complete data sets is to develop the most advanced algorithms
+to attract new users of smart phones. These data sets will be used for wearable computing.
+
+Below is the link to the site where the complete data sets was obtained:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Data sets can be downloaded in the following URL with a complete description (read READ ME file):
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-Complete description of the data set are included in the zipped files.
-
-The general flow of the code is described below:
+The script, run_analysis.R, is used to merge and clean those data sets to come up with a tidy data set.
+The general flow of the code to create the tidy data set is described below:
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 3. Uses descriptive activity names to name the activities in the data set
 4. Labels the data set with descriptive variable names.
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+For more details on how the script works, read the READ.md files.
+   
+ The content of the tidy_data_set.txt file shows the mean of each variable per user and per activity.
+ The column label is for each activity and variable, while the row is for the user.
+ 
+ For example, the first value (row 2 and column 1) -0.9280564692 is the mean for variable 3D.Signal.Body.Accelerator.StandardDev_X
+ and activity LAYING (i.e. the column label is "LAYING.3D.Signal.Body.Accelerator.StandardDev_X") for user 1.
+ 
+ You may use read.table to read the tidy data set. This will give you a three-dimensional matrix
+ where first index is for USER, 2nd index for Activity Label and the 3rd index for the mean of the variables.
 
-In 3, I removed unnecessar characters in the column labels (e.g. dot).
-I also replaced some of the characters in teh label to make it more descriptive as listed below:
-      "tBody" was replaced by "3D Signal Body"
-      "tGravity" was replaced by "3D Signal Gravity"
-      "fbodybody" was replaced by "FD Signal Body"
-      fBody" was replaced by "FD Signal Body"
-      "Acc" was replaced by " Accelerator "
-      "Mag" was replaced by " Magnitude "
-      "Jerk" was replaced by " Jerk "
-      "Gyro" was replaced by " Gyro "
-      "std" was replaced by "StandardDev"
-      "mean" was replaced by "Mean"
-      
-      
-  In 5, I melt the original data set to easily compute the mean for each variable, for each user and activity
-  using cast function.
-  
-  I iterate in the resulting 3-dimensional matrix, to write them in a csv file with a readable
-  formatting or display.
-  
-  Note: To make the content of the output file more readable, I used row.names=TRUE inside write.table()
-  function. You may set it to FALSE if you don't want to display row labels. 
-  
-  The content of the file shows the mean of each variable per user and per activity.
-  The tables are per USER. Then for each table, the row is the activity and the column is the computed mean of the variable.
+This tidy data set composed of 30 rows (excluding the header) and 396 columns (6 activities and 66 variables).
