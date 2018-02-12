@@ -29,5 +29,7 @@ For more details on how the script works, read the READ.md files.
  
  You may use read.table to read the tidy data set. This will give you a three-dimensional matrix
  where first index is for USER, 2nd index for Activity Label and the 3rd index for the mean of the variables.
+ The USER takes the values from 1 to 30 while the columns is a pairwise combination of activity label (i.e. "Laying", "Sitting", "Standing", 
+ "Walking", "Walking Downstairs", and "Walking Upstairs") and the variables.
 
 This tidy data set composed of 30 rows (excluding the header) and 396 columns (6 activities and 66 variables).
