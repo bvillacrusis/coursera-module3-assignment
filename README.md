@@ -25,34 +25,34 @@ tidy_data_set.csv.
 Below is the main flow of the program:
 
 Step 1. Merges the training and the test sets to create one data set.
-  -- gets the features labels from features.txt file. These labels will serve as the header name for each activity
-  -- gets all the labels associated to MEAN and STANDARD DEVIATION. 
-  -- the extracted mean and std labels are then used to extract needed activities and their measurement
-  -- the code extracted the train data set first then followed by the test data set
-  -- the train and test data set are then combined to get complete_dataset
+  * gets the features labels from features.txt file. These labels will serve as the header name for each activity
+  * gets all the labels associated to MEAN and STANDARD DEVIATION. 
+  * the extracted mean and std labels are then used to extract needed activities and their measurement
+  * the code extracted the train data set first then followed by the test data set
+  * the train and test data set are then combined to get complete_dataset
   
 Step 2. Uses descriptive activity names to name the activities in the data set
-  -- gets the activity labels from activity_labels.txt. This will replace activity number label by character label
-  -- the code used mutate function to rename activity label
+  * gets the activity labels from activity_labels.txt. This will replace activity number label by character label
+  * the code used mutate function to rename activity label
   
 Step 3. Labels the data set with descriptive variable names.
-  -- I edit the variable names using sub function
-  -- the code did the following changes: 
-      "tBody" was replaced by "3D Signal Body"
-      "tGravity" was replaced by "3D Signal Gravity"
-      "fbodybody" was replaced by "FD Signal Body"
-      fBody" was replaced by "FD Signal Body"
-      "Acc" was replaced by " Accelerator "
-      "Mag" was replaced by " Magnitude "
-      "Jerk" was replaced by " Jerk "
-      "Gyro" was replaced by " Gyro "
-      "std" was replaced by "StandardDev"
-      "mean" was replaced by "Mean"
+  * I edit the variable names using sub function
+  * the code did the following changes: 
+        * "tBody" was replaced by "3D Signal Body"
+        * "tGravity" was replaced by "3D Signal Gravity"
+        * "fbodybody" was replaced by "FD Signal Body"
+        * fBody" was replaced by "FD Signal Body"
+        * "Acc" was replaced by " Accelerator "
+        * "Mag" was replaced by " Magnitude "
+        * "Jerk" was replaced by " Jerk "
+        * "Gyro" was replaced by " Gyro "
+        * "std" was replaced by "StandardDev"
+        * "mean" was replaced by "Mean"
       
 Step 4. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-  -- the code used MELT function to create a new data frame to be used for computation of mean
-  -- the resulting data frame were then casted to compute the mean for each variable for each activity and each subject
-  -- the resulting data was then written in a text file using write.table()
+  * the code used MELT function to create a new data frame to be used for computation of mean
+  * the resulting data frame were then casted to compute the mean for each variable for each activity and each subject
+  * the resulting data was then written in a text file using write.table()
 
 
 
