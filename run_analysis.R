@@ -66,11 +66,8 @@
   # compute mean for each subject, training activity and variable
   cast_data<-cast(melt_data_set,Subject~Training_label~variable,mean,na.rm=TRUE)
   # # write the result to a file
-  for(index in 1:nrow(cast_data)){
-    write(paste("User: ", index),file="./tidy_data_set.csv",append=TRUE)
-    write.table(cast_data[index,,], file = "./tidy_data_set.csv", sep = "|",row.names = TRUE,append=TRUE)
-    write("\n \n",file="./tidy_data_set.csv",append=TRUE)
-  }
+  # # write the result to a file
+  write.table(cast_data, file = "./tidy_data_set.txt", sep = "  ",row.names = FALSE)
 
   
 
