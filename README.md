@@ -39,15 +39,15 @@ Step 3. Labels the data set with descriptive variable names.
   * I edit the variable names using sub function
   * the code did the following changes:
     - "tBody" was replaced by "3D Signal Body"
-    *"tGravity" was replaced by "3D Signal Gravity"
-    *"fbodybody" was replaced by "FD Signal Body"
-    *"fBody" was replaced by "FD Signal Body"
-    *"Acc" was replaced by " Accelerator "
-    *"Mag" was replaced by " Magnitude "
-    *"Jerk" was replaced by " Jerk "
-    *"Gyro" was replaced by " Gyro "
-    *"std" was replaced by "StandardDev"
-    *"mean" was replaced by "Mean"
+    - "tGravity" was replaced by "3D Signal Gravity"
+    - "fbodybody" was replaced by "FD Signal Body"
+    - "fBody" was replaced by "FD Signal Body"
+    - "Acc" was replaced by " Accelerator "
+    - "Mag" was replaced by " Magnitude "
+    - "Jerk" was replaced by " Jerk "
+    - "Gyro" was replaced by " Gyro "
+    - "std" was replaced by "StandardDev"
+    - "mean" was replaced by "Mean"
       
 Step 4. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   * the code used MELT function to create a new data frame to be used for computation of mean
